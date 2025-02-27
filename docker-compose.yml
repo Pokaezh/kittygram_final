@@ -3,23 +3,28 @@ version: '3'
 volumes:
   pg_data:
   static:
+  media:
 
 services:
   db:
     image: postgres:13
+    env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    build: ./backend/
+    image: pokaezh/kittygram_backend
     env_file: .env
+    volumes:
+      - static:/backend_static
+      - media:/media
   frontend:
     env_file: .env
-    build: ./frontend/
+    image: pokaezh/kittygram_frontend
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
-    build: ./nginx/
+    image: pokaezh/kittygram_gateway
     env_file: .env
     ports:
       - 9000:80
