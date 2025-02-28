@@ -25,7 +25,7 @@ services:
     volumes:
       - static:/static
   gateway:
-    build: ./ngnix/
+    build: ./nginx/
     env_file: .env
     ports:
       - 9000:80
