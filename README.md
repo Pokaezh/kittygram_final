@@ -91,4 +91,6 @@
 Теперь вы готовы развернуть проект на Django на удаленном сервере с использованием Docker Compose и GitHub Actions. Если у вас возникнут вопросы, не стесняйтесь обращаться!
 
 ### Контакты
-_Николай Показаньев   https://t.me/Pokaezh   pokaezh@yandex.ru_
+Николай Показаньев   
+https://t.me/Pokaezh   
+pokaezh@yandex.ru_
